@@ -1,2 +1,252 @@
 # market-website
 澳门台山街市
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳门台山街市市政综合大楼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f4e9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG_4943.JPG');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #c12b2b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #c12b2b;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 15px;
+            background: white;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        
+        .map-container {
+            height: 400px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>澳门台山街市市政综合大楼</h1>
+        <p class="subtitle">COMPLEXO MUNICIPAL DE MERCADO DE TAI SAN</p>
+    </header>
+    
+    <div class="container">
+        <section class="section" id="about">
+            <div class="info-box">
+                <h2>关于台山街市</h2>
+                <p>台山街市市政综合大楼是澳门北区重要的市政设施，集街市、社区设施于一体，为周边居民提供便利的生活服务。</p>
+                <p>大楼建筑融合了现代与传统元素，体现了澳门中西文化交融的特色。</p>
+                
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="IMG_4943.JPG" alt="台山街市外观" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>街市外观</h3>
+                            <p>台山街市市政综合大楼建筑外观</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="IMG_4945.JPG" alt="台山街市标识" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>街市标识</h3>
+                            <p>台山街市市政综合大楼官方标识</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="facilities">
+            <div class="info-box">
+                <h2>设施与服务</h2>
+                <p>台山街市市政综合大楼提供多种便民设施和服务：</p>
+                <ul>
+                    <li>新鲜食材市场</li>
+                    <li>熟食中心</li>
+                    <li>社区活动中心</li>
+                    <li>政府服务窗口</li>
+                    <li>公共休息区</li>
+                </ul>
+                
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="IMG_4944.JPG" alt="街市平面图" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>街市平面图</h3>
+                            <p>台山街市各层功能分布示意图</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="location">
+            <div class="info-box">
+                <h2>位置与交通</h2>
+                <p>地址：澳门台山巴波沙大马路</p>
+                <p>交通方式：</p>
+                <ul>
+                    <li>巴士：1A、3、10、10B、10X、28B、29、30、34路可达</li>
+                    <li>附近地标：台山平民大厦、澳门工联职业技术中学</li>
+                </ul>
+                
+                <div class="map-container">
+                    <!-- 这里可以嵌入Google地图 -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.185366633647!2d113.5423143154454!3d22.31397234936325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040754a95a7a1b%3A0x5c5f5e5a5a5a5a5a!2z5Y-w5YyX6Zuy5Y2X5YyX5biC5aSn5a6J5Z-O5a6J5Y2X!5e0!3m2!1szh-CN!2sm!4v1620000000000!5m2!1szh-CN!2sm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2023 澳门台山街市市政综合大楼 | 官方网站</p>
+        <p>联系电话：+853 2888 8888</p>
+    </footer>
+    
+    <script>
+        // 滚动动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {threshold: 0.1});
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
